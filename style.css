@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -3%;
+  margin: 0;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+}
+
+main {
+  width: 360px;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0B2434;
+}
+
+section {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 33px;
+  gap: 25px;
+  position: relative;
+}
+
+.scores {
+  position: absolute;
+  top: 1rem;
+  left: .5rem;
+  right: .5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.score {
+  font-size: 1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.dice-box {
+  width: 100%;
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  font-family: 'Karla', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  gap: 1rem;
+}
+
+.die {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven eight nine";
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  background-color: white;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.die:hover {
+  border: 1px solid red;
+}
+
+.held {
+  background-color: #59E391;
+}
+
+button {
+  width: 92px;
+  height: 36px;
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #5035FF;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+}
+
+/* Grid area 1 */
+._2 .__1,
+._3 .__1,
+._4 .__1,
+._5 .__1,
+._6 .__1 {
+  grid-area: one;
+  justify-self: end;
+  align-self: end
+}
+
+/* Grid area 3 */
+._4 .__2,
+._5 .__2,
+._6 .__2 {
+  grid-area: three;
+  justify-self: start;
+  align-self: end
+}
+
+/* Grid area 4 */
+._6 .__3 {
+  grid-area: four;
+  justify-self: end;
+  align-self: center;
+}
+
+/* Grid area five */
+._1 .__1,
+._3 .__2,
+._5 .__3 {
+  grid-area: five;
+  justify-self: center;
+  align-self: center
+}
+
+/* Grid area 6 */
+._6 .__4 {
+  grid-area: six;
+  justify-self: start;
+  align-self: center;
+}
+
+/* Grid area 7 */
+._4 .__3,
+._5 .__4,
+._6 .__5 {
+  grid-area: seven;
+  justify-self: end;
+  align-self: start;
+}
+
+ /* Grid area 9 */
+._2 .__2,
+._3 .__3,
+._4 .__4,
+._5 .__5,
+._6 .__6 {
+  grid-area: nine;
+  justify-self: start;
+  align-self: start;
+}
